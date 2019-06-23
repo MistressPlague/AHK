@@ -59,5 +59,8 @@ CreatePixel(Color, Handle)
 ; An Example Of How To Hide The GUI:
 ; WinHide ColoredFilledBox, ,
 ; WinHide BoxOutline, ,
+; An Example Of How To Make A Crosshair In The Screen's Center
+; CrosshairHorz := CreateRectangle("CrosshairHorz", ZeroX - 5, ZeroY - 1, 10, 2, 0xFF00FF, 0xFF00FF, 255)
+; CrosshairVert := CreateRectangle("CrosshairVert", ZeroX - 1, ZeroY - 5, 2, 10, 0xFF00FF, 0xFF00FF, 255)
 ; Enjoy!
 ; ~OFWModz~
