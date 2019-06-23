@@ -1,10 +1,10 @@
-CreateRectangle(Identifier, XPos, YPos, Width, Height, BackColor, ForeColor, Transparency)
+CreateRectangle(Identifier, XPos, YPos, Width := 30, Height := 30, BackColor := 0xFF00FF, ForeColor := "", Transparency := 255)
 {
 	Gui %Identifier%: Color, %BackColor%	; Set GUI BG color
 	
 	Gui %Identifier%: -Caption +ToolWindow +E0x20	; Create GUI With No Title Bar, No Taskbar Icon, Invisible To Alt-Tab, And That Is Click-Through
 	
-	if (BackColor = 0x010101)	;	If BackColor Is 0x010101, Make BG Transparent And Turn Into Box Outline
+	if (BackColor = 0x010101 && ForeColor != "")	;	If BackColor Is 0x010101, Make BG Transparent And Turn Into Box Outline
 	{
 		;	Make Outline [Top]
 		Gui %Identifier%: Add, Picture, % "x" 0 " y" 0 " w" Width " h" 2 " +0x4E +HWNDhPicture1"
