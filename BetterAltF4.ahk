@@ -5,7 +5,7 @@
 
 	Gui, +AlwaysOnTop
 	Gui, Color, 000000
-	Gui, Font, S8 Bold, Verdana
+	Gui, Font, S8 cFF00FF Bold, Verdana
 	Gui, Add, Text,, What Would You Like To Do To:
 	Gui, Add, Text, x10 y26, %Title%?
 	Gui, Add, Button, cRed x10 y50 w75 h25, Kill
