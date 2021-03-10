@@ -1,4 +1,4 @@
-!F4::
+<!F4::
 {
 	WinGet, xPID, PID, A
 
@@ -10,26 +10,25 @@
 	Suspend, On
 	return
 
-	Escape::
-	Gui, Destroy
-	Suspend, Off
-	return
-
 	GuiClose:
-	Gui, Destroy
-	Suspend, Off
-	return
+	{
+		Gui, Destroy
+		Suspend, Off
+		return
+	}
 
 	ButtonYES:
-	Process, Close, %xPID%
-	Gui, Submit
-	Gui, Destroy
-	Suspend, Off
-	return
-	
+	{
+		Process, Close, %xPID%
+		Gui, Destroy
+		Suspend, Off
+		return
+	}
+
 	ButtonNO:
-	Gui, Submit
-	Gui, Destroy
-	Suspend, Off
-	return
+	{
+		Gui, Destroy
+		Suspend, Off
+		return
+	}
 }
