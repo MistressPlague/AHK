@@ -1,3 +1,19 @@
+if not A_IsAdmin
+{
+	StringRight, CheckExtension, A_ScriptFullPath, 4
+
+	if (CheckExtension = ".ahk")
+	{
+		Run *RunAs "%A_AhkPath%" "%A_ScriptFullPath%"
+		ExitApp
+	}
+	else
+	{
+		Run *RunAs "%A_ScriptFullPath%"
+		ExitApp
+	}
+}
+
 <!F4::
 {
 	WinGet, xPID, PID, A
